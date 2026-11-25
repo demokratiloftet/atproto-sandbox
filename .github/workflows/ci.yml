@@ -10,7 +10,7 @@ concurrency:
   group: ci-${{ github.ref }}
   cancel-in-progress: true
 jobs:
-  checks:
+  check:
     runs-on: ubuntu-24.04
     timeout-minutes: 30
     steps:
@@ -23,6 +23,9 @@ jobs:
           node-version: '24.17.0'
       - name: Scan Git history for secrets
         run: bash .github/scripts/scan-secrets.sh
+      - name: Dependency review (PR only)
+        if: github.event_name == 'pull_request'
+        uses: actions/dependency-review-action@da24556b548a50705dd671f47852072ea4c105d9 # v4.7.1
       - run: npm ci
       - run: npm run typecheck
       - run: npm run format:check
