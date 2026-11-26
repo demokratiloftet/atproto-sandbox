@@ -32,6 +32,9 @@ jobs:
       - run: pnpm audit --audit-level=moderate
       - run: pnpm run up
       - run: pnpm run verify
+      - name: Dump container logs on failure
+        if: failure()
+        run: docker compose logs --no-color --tail=500
       - name: Stop disposable fixture
         if: always()
         run: docker compose down
