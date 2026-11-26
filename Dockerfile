@@ -2,7 +2,7 @@ FROM node:24.17.0-bookworm-slim@sha256:862263c612aa437e3037674b85419622a9d93bff8
 RUN apt-get update && apt-get install -y --no-install-recommends python3 make g++ ca-certificates && rm -rf /var/lib/apt/lists/*
 RUN npm install --global pnpm@11.8.0
 WORKDIR /sandbox
-COPY package.json pnpm-lock.yaml ./
+COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
 RUN pnpm install --frozen-lockfile
 COPY *.ts tsconfig.json ./
 RUN pnpm run build && pnpm prune --prod
