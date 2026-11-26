@@ -1,7 +1,7 @@
 #!/bin/sh
 set -eu
 cd "$(dirname "$0")"
-npm run build
+pnpm run build
 docker compose exec -T --user node atproto node /sandbox/dist/isolation-test.js
 docker compose exec -T --user node gateway node /sandbox/dist/isolation-test.js
 node dist/smoke-test.js
