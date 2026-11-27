@@ -4,7 +4,7 @@
   "license": "MIT",
   "type": "module",
   "dependencies": {
-    "@atproto/dev-env": "0.7.19",
+    "@atproto/dev-env": "0.7.22",
     "zod": "4.6.7"
   },
   "scripts": {

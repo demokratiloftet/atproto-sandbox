@@ -10,7 +10,6 @@ overrides:
   kysely: 0.29.6
   nodemailer: 10.1.4
   undici: 6.29.1
-  zod: 4.6.7
   qs: 6.16.1
   follow-redirects: 1.16.2
   glob: 14.0.2
@@ -30,8 +29,8 @@ importers:
   .:
     dependencies:
       '@atproto/dev-env':
-        specifier: 0.7.19
-        version: 0.7.19(@opentelemetry/api@1.10.0)(@types/node@24.19.1)
+        specifier: 0.7.22
+        version: 0.7.22(@opentelemetry/api@1.10.0)(@types/node@24.19.1)
       zod:
         specifier: 4.6.7
         version: 4.6.7
@@ -135,8 +134,8 @@ packages:
     resolution: {integrity: sha512-OZseCSPwiRlfEMZIIKPzukTkNbnweG2kSNvhUJxisvWOYJHGKjQDtLIbETdNXiB77jITxe1CZdVRaZaydxMS9A==}
     engines: {node: '>=22'}
 
-  '@atproto/dev-env@0.7.19':
-    resolution: {integrity: sha512-S/XEwfpALFqPRKfBWFBXbf45dunVdtml3CAIjF34GdH67F5R7lcBpyBe3U7lxKCN4l/FDp+qkAhQtztfxKOOrQ==}
+  '@atproto/dev-env@0.7.22':
+    resolution: {integrity: sha512-6yNbNi3YWWn3r2Aip3S9IGoZTFrRZnF0J3gpze2ykXM0Fg8MS0Dn9PGzeXFJLtZim4gTkGZa1NRCFGVhy6ZBBw==}
     engines: {node: '>=22'}
     hasBin: true
 
@@ -158,10 +157,6 @@ packages:
 
   '@atproto/lex-cbor@0.1.11':
     resolution: {integrity: sha512-gcsGIMLJNh9Wxc3h8NxeBvVsFUWpXiGAmwZ6otOqgakdmH8XyUkpVhvdaFRFFIktOeHn95RTYvK29B4FuFg62g==}
-    engines: {node: '>=22'}
-
-  '@atproto/lex-client@0.6.2':
-    resolution: {integrity: sha512-wp3IC93+vC4/RH/rT7GvpJPX96l36ay4g8HkEKUpIvgP4oX0UiRIQgdKXaYepzjWs5hIf3NaWzkUXWt4Vjw2ZA==}
     engines: {node: '>=22'}
 
   '@atproto/lex-client@0.7.0':
@@ -186,10 +181,6 @@ packages:
 
   '@atproto/lex-resolver@0.4.10':
     resolution: {integrity: sha512-9wW99sJHW+9Ual9qJuDDWnD4VPkuAwTSK3ffveBY5WnToU445SYRkoR3HE3E/dWXYazEPvEr3xiwsleV4iDwhA==}
-    engines: {node: '>=22'}
-
-  '@atproto/lex-rpc@0.2.2':
-    resolution: {integrity: sha512-BwwvWaXIKO/Co4fhrZy1MBU5vxkSaHB6I5G7PhsCIl5D85CcVy7nBZXECrv8tPj4goPnEzXcmTQzDgscEHWiDw==}
     engines: {node: '>=22'}
 
   '@atproto/lex-rpc@0.3.0':
@@ -2442,6 +2433,12 @@ packages:
     resolution: {integrity: sha512-GZtjxm/J/4TSxuL3FNYjCmLktBTnIw/rVmKSIyKeYAZpmJB2ig9VauCC5xsa82GNKVKDAqpOn3KVzNt0zmrU0g==}
     engines: {node: '>=12'}
 
+  zod@3.23.8:
+    resolution: {integrity: sha512-XBx9AXhXktjUqnepgTiE5flcKIYWi/rme0Eaj+5Y0lftuGBq+jyRu/md4WnuxqgP1ubdpNCsYEYPxrzVHD8d6g==}
+
+  zod@3.25.76:
+    resolution: {integrity: sha512-gzUt/qt81nXsFGKIFcC3YnfEAx5NkunCfnDlvuBSSFS02bcXu4Lmea0AFIUwbLWxWPx3d9p8S5QoaujKcNQxcQ==}
+
   zod@4.6.7:
     resolution: {integrity: sha512-g8W2D2kU6a8untc053fX1uVBKzM7yqAxW/3zwk83+6RyF2+SKOuV+c0wBDhUwzV1PaGapmZH+rmcUzPf+3CGwg==}
 
@@ -2454,7 +2451,7 @@ snapshots:
       '@atproto-labs/simple-store': 0.5.2
       '@atproto-labs/simple-store-memory': 0.2.7
       '@atproto/did': 0.5.6
-      zod: 4.6.7
+      zod: 3.25.76
 
   '@atproto-labs/fetch-node@0.5.0':
     dependencies:
@@ -2480,7 +2477,7 @@ snapshots:
       '@atproto-labs/simple-store': 0.5.2
       '@atproto-labs/simple-store-memory': 0.2.7
       '@atproto/did': 0.5.6
-      zod: 4.6.7
+      zod: 3.25.76
 
   '@atproto-labs/identity-resolver@0.4.15':
     dependencies:
@@ -2538,7 +2535,7 @@ snapshots:
       await-lock: 3.0.0
       multiformats: 13.4.2
       tlds: 1.261.0
-      zod: 4.6.7
+      zod: 3.25.76
 
   '@atproto/aws@0.3.27':
     dependencies:
@@ -2607,7 +2604,7 @@ snapshots:
       undici_v6: undici@6.29.1
       undici_v7: undici@7.30.2
       undici_v8: undici@8.13.1
-      zod: 4.6.7
+      zod: 3.23.8
     transitivePeerDependencies:
       - '@types/node'
       - bufferutil
@@ -2641,21 +2638,21 @@ snapshots:
       '@atproto/lex-data': 0.1.11
       '@atproto/lex-json': 0.1.11
       '@atproto/syntax': 0.7.9
-      zod: 4.6.7
+      zod: 3.25.76
 
   '@atproto/common@0.1.0':
     dependencies:
       '@ipld/dag-cbor': 7.0.3
       multiformats: 9.9.0
       pino: 8.21.0
-      zod: 4.6.7
+      zod: 3.25.76
 
   '@atproto/common@0.1.1':
     dependencies:
       '@ipld/dag-cbor': 7.0.3
       multiformats: 9.9.0
       pino: 8.21.0
-      zod: 4.6.7
+      zod: 3.25.76
 
   '@atproto/common@0.8.13':
     dependencies:
@@ -2679,7 +2676,7 @@ snapshots:
       '@noble/hashes': 1.8.0
       uint8arrays: 5.1.1
 
-  '@atproto/dev-env@0.7.19(@opentelemetry/api@1.10.0)(@types/node@24.19.1)':
+  '@atproto/dev-env@0.7.22(@opentelemetry/api@1.10.0)(@types/node@24.19.1)':
     dependencies:
       '@atproto/api': 0.32.7
       '@atproto/bsky': 0.5.21(@types/node@24.19.1)
@@ -2687,7 +2684,7 @@ snapshots:
       '@atproto/common-web': 0.5.20
       '@atproto/crypto': 0.5.8
       '@atproto/identity': 0.5.27
-      '@atproto/lex-client': 0.6.2
+      '@atproto/lex-client': 0.7.0
       '@atproto/lex-schema': 0.3.2
       '@atproto/lexicon': 0.7.22
       '@atproto/ozone': 0.16.6(@opentelemetry/api@1.10.0)
@@ -2714,7 +2711,7 @@ snapshots:
 
   '@atproto/did@0.5.6':
     dependencies:
-      zod: 4.6.7
+      zod: 3.23.8
 
   '@atproto/identity@0.5.27':
     dependencies:
@@ -2730,23 +2727,13 @@ snapshots:
   '@atproto/jwk@0.7.4':
     dependencies:
       multiformats: 13.4.2
-      zod: 4.6.7
+      zod: 3.25.76
 
   '@atproto/lex-cbor@0.1.11':
     dependencies:
       '@atproto/lex-data': 0.1.11
       cborg: 4.5.8
       tslib: 2.9.1
-
-  '@atproto/lex-client@0.6.2':
-    dependencies:
-      '@atproto/lex-data': 0.1.11
-      '@atproto/lex-rpc': 0.2.2
-      '@atproto/lex-schema': 0.3.2
-      tslib: 2.9.1
-    transitivePeerDependencies:
-      - bufferutil
-      - utf-8-validate
 
   '@atproto/lex-client@0.7.0':
     dependencies:
@@ -2799,18 +2786,6 @@ snapshots:
       - bufferutil
       - utf-8-validate
 
-  '@atproto/lex-rpc@0.2.2':
-    dependencies:
-      '@atproto/lex-cbor': 0.1.11
-      '@atproto/lex-data': 0.1.11
-      '@atproto/lex-json': 0.1.11
-      '@atproto/lex-schema': 0.3.2
-      '@atproto/ws-client': 0.2.2
-      tslib: 2.9.1
-    transitivePeerDependencies:
-      - bufferutil
-      - utf-8-validate
-
   '@atproto/lex-rpc@0.3.0':
     dependencies:
       '@atproto/lex-cbor': 0.1.11
@@ -2835,7 +2810,7 @@ snapshots:
       '@atproto/common-web': 0.5.20
       '@atproto/syntax': 0.7.9
       multiformats: 13.4.2
-      zod: 4.6.7
+      zod: 3.25.76
 
   '@atproto/oauth-provider-api@0.12.1':
     dependencies:
@@ -2877,7 +2852,7 @@ snapshots:
       http-errors: 2.0.1
       ioredis: 6.1.0
       jose: 5.10.0
-      zod: 4.6.7
+      zod: 3.25.76
     transitivePeerDependencies:
       - bufferutil
       - supports-color
@@ -2891,7 +2866,7 @@ snapshots:
       '@atproto-labs/simple-store-memory': 0.2.7
       '@atproto/did': 0.5.6
       '@atproto/oauth-types': 0.8.0
-      zod: 4.6.7
+      zod: 3.25.76
 
   '@atproto/oauth-scopes@0.5.16':
     dependencies:
@@ -2902,7 +2877,7 @@ snapshots:
     dependencies:
       '@atproto/did': 0.5.6
       '@atproto/jwk': 0.7.4
-      zod: 4.6.7
+      zod: 3.25.76
 
   '@atproto/ozone@0.16.6(@opentelemetry/api@1.10.0)':
     dependencies:
@@ -2993,7 +2968,7 @@ snapshots:
       strtok3: 10.8.0
       uint8arrays: 5.1.1
       undici: 6.29.1
-      zod: 4.6.7
+      zod: 3.25.76
     transitivePeerDependencies:
       - bufferutil
       - debug
@@ -3009,7 +2984,7 @@ snapshots:
       '@atproto/lex-data': 0.1.11
       '@atproto/syntax': 0.7.9
       varint: 6.0.0
-      zod: 4.6.7
+      zod: 3.23.8
 
   '@atproto/sync@0.4.31':
     dependencies:
@@ -3065,7 +3040,7 @@ snapshots:
   '@atproto/xrpc@0.8.21':
     dependencies:
       '@atproto/lexicon': 0.7.22
-      zod: 4.6.7
+      zod: 3.25.76
 
   '@aws-sdk/checksums@3.1002.7':
     dependencies:
@@ -3329,7 +3304,7 @@ snapshots:
       axios: 1.21.1
       multiformats: 9.9.0
       uint8arrays: 3.0.0
-      zod: 4.6.7
+      zod: 3.25.76
     transitivePeerDependencies:
       - debug
       - supports-color
@@ -3342,7 +3317,7 @@ snapshots:
       axios: 1.21.1
       multiformats: 9.9.0
       uint8arrays: 3.0.0
-      zod: 4.6.7
+      zod: 3.25.76
     transitivePeerDependencies:
       - debug
       - supports-color
@@ -3351,7 +3326,7 @@ snapshots:
     dependencies:
       '@atproto/common': 0.1.0
       '@atproto/crypto': 0.1.0
-      '@did-plc/lib': 0.0.1
+      '@did-plc/lib': 0.0.4
       axios: 1.21.1
       cors: 2.8.6
       express: 4.22.3
@@ -5567,5 +5542,9 @@ snapshots:
       string-width: 4.2.3
       y18n: 5.0.8
       yargs-parser: 21.1.1
+
+  zod@3.23.8: {}
+
+  zod@3.25.76: {}
 
   zod@4.6.7: {}
