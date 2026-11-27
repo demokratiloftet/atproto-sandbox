@@ -30,14 +30,14 @@ importers:
     dependencies:
       '@atproto/dev-env':
         specifier: 0.7.22
-        version: 0.7.22(@opentelemetry/api@1.10.0)(@types/node@24.19.1)
+        version: 0.7.22(@opentelemetry/api@1.10.0)(@types/node@25.9.9)
       zod:
         specifier: 4.6.7
         version: 4.6.7
     devDependencies:
       '@types/node':
-        specifier: 24.19.1
-        version: 24.19.1
+        specifier: 25.9.9
+        version: 25.9.9
       prettier:
         specifier: 3.10.1
         version: 3.10.1
@@ -1167,8 +1167,8 @@ packages:
   '@types/mysql@2.15.27':
     resolution: {integrity: sha512-YfWiV16IY0OeBfBCk8+hXKmdTKrKlwKN1MNKAPBu5JYxLwBEZl7QzeEpGnlZb3VMGJrrGmB84gXiH+ofs/TezA==}
 
-  '@types/node@24.19.1':
-    resolution: {integrity: sha512-aS3/DG0oM05K0RIXXP+hKjinGG5IgSSVGzswZxW3O0sS3pH4/fycXundUC9XsszgKCk4gHXylTEK6hyFxVxnoQ==}
+  '@types/node@25.9.9':
+    resolution: {integrity: sha512-b4e2xxj/yMeT2hNlD6x7zNFiQK2Dlmkb9CQ6v3/1G2RezKN4YS2lcEv8lzGm1mhs4f2lM4yNAMI/zUDBZBBt7w==}
 
   '@types/oracledb@6.5.2':
     resolution: {integrity: sha512-kK1eBS/Adeyis+3OlBDMeQQuasIDLUYXsi2T15ccNJ0iyUpQ4xDF7svFu3+bGVrI0CMBUclPciz+lsQR3JX3TQ==}
@@ -2361,8 +2361,8 @@ packages:
     resolution: {integrity: sha512-mLyPQnHwUxaM/rideoK/+KL8DaAJLRl4aBCfmX444aCSLnIaomqPLtNRe2jdCYcsk5wZzXrDIQC8ZeYNRAYyIA==}
     engines: {node: '>=20.18.1'}
 
-  undici@8.13.1:
-    resolution: {integrity: sha512-Kt7EaPjh0s93lJH/PmW3d5rhkcpUa6fS3jqZ7+YGxNd9L7Xy/i827xe4C2uhhq+pJebM4tQOl5AgHmW11G5Skg==}
+  undici@8.12.4:
+    resolution: {integrity: sha512-8Mx+uNKKER2bA4AdtedkqRbwUCIJFr2nJckXRe5yrDqzePqwLP7VNcctN8/XdmDSbF7mS+jJKIszlL+vbam1VA==}
     engines: {node: '>=22.19.0'}
 
   unicode-segmenter@0.14.5:
@@ -2460,7 +2460,7 @@ snapshots:
       ipaddr.js: 2.5.0
       undici_v6: undici@6.29.1
       undici_v7: undici@7.30.2
-      undici_v8: undici@8.13.1
+      undici_v8: undici@8.12.4
 
   '@atproto-labs/fetch@0.5.0':
     dependencies:
@@ -2551,7 +2551,7 @@ snapshots:
       multiformats: 13.4.2
       uint8arrays: 5.1.1
 
-  '@atproto/bsky@0.5.21(@types/node@24.19.1)':
+  '@atproto/bsky@0.5.21(@types/node@25.9.9)':
     dependencies:
       '@atproto-labs/fetch-node': 0.5.0
       '@atproto-labs/opentelemetry-node': 0.6.0
@@ -2596,14 +2596,14 @@ snapshots:
       pg: 8.23.1
       pino: 10.4.0
       pino-http: 11.0.0
-      sharp: 0.35.5(@types/node@24.19.1)
+      sharp: 0.35.5(@types/node@25.9.9)
       structured-headers: 1.0.1
       typescript: 7.0.2
       uint8arrays: 5.1.1
       undici: 6.29.1
       undici_v6: undici@6.29.1
       undici_v7: undici@7.30.2
-      undici_v8: undici@8.13.1
+      undici_v8: undici@8.12.4
       zod: 3.23.8
     transitivePeerDependencies:
       - '@types/node'
@@ -2676,10 +2676,10 @@ snapshots:
       '@noble/hashes': 1.8.0
       uint8arrays: 5.1.1
 
-  '@atproto/dev-env@0.7.22(@opentelemetry/api@1.10.0)(@types/node@24.19.1)':
+  '@atproto/dev-env@0.7.22(@opentelemetry/api@1.10.0)(@types/node@25.9.9)':
     dependencies:
       '@atproto/api': 0.32.7
-      '@atproto/bsky': 0.5.21(@types/node@24.19.1)
+      '@atproto/bsky': 0.5.21(@types/node@25.9.9)
       '@atproto/bsync': 0.1.13
       '@atproto/common-web': 0.5.20
       '@atproto/crypto': 0.5.8
@@ -4261,25 +4261,25 @@ snapshots:
 
   '@types/connect@3.4.38':
     dependencies:
-      '@types/node': 24.19.1
+      '@types/node': 25.9.9
 
   '@types/http-errors@2.0.5': {}
 
   '@types/memcached@2.2.10':
     dependencies:
-      '@types/node': 24.19.1
+      '@types/node': 25.9.9
 
   '@types/mysql@2.15.27':
     dependencies:
-      '@types/node': 24.19.1
+      '@types/node': 25.9.9
 
-  '@types/node@24.19.1':
+  '@types/node@25.9.9':
     dependencies:
       undici-types: 7.24.6
 
   '@types/oracledb@6.5.2':
     dependencies:
-      '@types/node': 24.19.1
+      '@types/node': 25.9.9
 
   '@types/pg-pool@2.0.7':
     dependencies:
@@ -4287,13 +4287,13 @@ snapshots:
 
   '@types/pg@8.15.6':
     dependencies:
-      '@types/node': 24.19.1
+      '@types/node': 25.9.9
       pg-protocol: 1.16.1
       pg-types: 2.2.0
 
   '@types/tedious@4.0.14':
     dependencies:
-      '@types/node': 24.19.1
+      '@types/node': 25.9.9
 
   '@typescript/typescript-aix-ppc64@7.0.2':
     optional: true
@@ -5168,7 +5168,7 @@ snapshots:
       '@protobufjs/path': 1.1.2
       '@protobufjs/pool': 1.1.0
       '@protobufjs/utf8': 1.1.2
-      '@types/node': 24.19.1
+      '@types/node': 25.9.9
       long: 5.3.2
 
   proxy-addr@2.0.8:
@@ -5289,7 +5289,7 @@ snapshots:
 
   setprototypeof@1.2.0: {}
 
-  sharp@0.35.5(@types/node@24.19.1):
+  sharp@0.35.5(@types/node@25.9.9):
     dependencies:
       '@img/colour': 1.1.0
       detect-libc: 2.1.2
@@ -5320,7 +5320,7 @@ snapshots:
       '@img/sharp-win32-arm64': 0.35.5
       '@img/sharp-win32-ia32': 0.35.5
       '@img/sharp-win32-x64': 0.35.5
-      '@types/node': 24.19.1
+      '@types/node': 25.9.9
 
   side-channel-list@1.0.1:
     dependencies:
@@ -5497,7 +5497,7 @@ snapshots:
 
   undici@7.30.2: {}
 
-  undici@8.13.1: {}
+  undici@8.12.4: {}
 
   unicode-segmenter@0.14.5: {}
 
