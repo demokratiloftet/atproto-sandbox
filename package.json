@@ -8,6 +8,7 @@
     "zod": "4.6.7"
   },
   "scripts": {
+    "prepare": "git config core.hooksPath .githooks || true",
     "up": "docker compose up -d --build --wait",
     "down": "docker compose down",
     "logs": "docker compose logs --tail=50 -f atproto",
@@ -17,6 +18,7 @@
     "typecheck": "tsc --noEmit",
     "pretest": "pnpm run build",
     "preverify": "pnpm run build",
+    "check": "pnpm run format:check && pnpm run typecheck",
     "format": "prettier --write *.ts",
     "format:check": "prettier --check *.ts"
   },
