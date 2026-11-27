@@ -26,6 +26,9 @@ jobs:
           version: 11.8.0
       - name: Scan Git history for secrets
         run: bash .github/scripts/scan-secrets.sh
+      - name: Dependency review (PR only)
+        if: github.event_name == 'pull_request'
+        uses: actions/dependency-review-action@da24556b548a50705dd671f47852072ea4c105d9 # v4.7.1
       - run: pnpm install --frozen-lockfile
       - run: pnpm run typecheck
       - run: pnpm run format:check
