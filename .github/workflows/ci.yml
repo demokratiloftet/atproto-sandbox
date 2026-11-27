@@ -21,14 +21,20 @@ jobs:
       - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
           node-version: '24.17.0'
+      - uses: pnpm/action-setup@73e46992e05b19abd31f2f3c20e0e7370d762115 # v6.1.1
+        with:
+          version: 11.8.0
       - name: Scan Git history for secrets
         run: bash .github/scripts/scan-secrets.sh
-      - run: npm ci
-      - run: npm run typecheck
-      - run: npm run format:check
-      - run: npm audit --audit-level=moderate
-      - run: npm run up
-      - run: npm run verify
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm run typecheck
+      - run: pnpm run format:check
+      - run: pnpm audit --audit-level=moderate
+      - run: pnpm run up
+      - run: pnpm run verify
+      - name: Dump container logs on failure
+        if: failure()
+        run: docker compose logs --no-color --tail=500
       - name: Stop disposable fixture
         if: always()
         run: docker compose down

@@ -7,16 +7,16 @@ No GitHub invitation, PDS account or Tailscale access is needed.
 
 ## Quick start
 
-Install **Docker with Compose**, **Git** and **Node.js 24.17.0** (see `.node-version`).
-Start Docker, then run:
+Install **Docker with Compose**, **Git**, **Node.js 24.17.0** (see `.node-version`)
+and **pnpm 11.8.0**. Start Docker, then run:
 
 ```sh
 git clone https://github.com/demokratiloftet/local-sandbox.git
 cd local-sandbox
-npm ci
-npm run build
-npm run up
-npm run verify
+pnpm install --frozen-lockfile
+pnpm run build
+pnpm run up
+pnpm run verify
 ```
 
 The first build downloads dependencies and can take a few minutes. Verification
@@ -49,8 +49,8 @@ PDS_APP_PASSWORD=local-sandbox-only
 ```
 
 In the **app directory**, run `pnpm pds:demo` to write, read and delete a test
-record. Run or restart `pnpm dev` to develop the UI and backend. The app uses pnpm;
-this separate sandbox uses npm with its committed `package-lock.json`.
+record. Run or restart `pnpm dev` to develop the UI and backend. Both the app
+and this sandbox use pnpm with their committed `pnpm-lock.yaml`.
 Several local apps can use the same PDS and agree on a shared record format.
 
 You can also point an AT Protocol client such as `@atproto/api` at the PDS URL
@@ -71,11 +71,11 @@ From the sandbox directory:
 
 ```sh
 curl --fail http://127.0.0.1:2583/xrpc/_health
-npm run logs
-npm run down
+pnpm run logs
+pnpm run down
 ```
 
-`npm run down` stops only this project's containers and removes its networks.
+`pnpm run down` stops only this project's containers and removes its networks.
 It discards fixture data. Check ports 2582 and 2583 are free before starting;
 do not stop another person's environment or publish the sandbox on a LAN/public
 address to resolve a conflict. If verification fails, inspect its first failing
@@ -112,10 +112,10 @@ local fixture isolated when sharing your app.
 ## Development checks
 
 ```sh
-npm run typecheck
-npm run format:check
-npm audit --audit-level=moderate
-npm run verify
+pnpm run typecheck
+pnpm run format:check
+pnpm audit --audit-level=moderate
+pnpm run verify
 ```
 
 CI starts a fresh sandbox and runs the same checks. `verify.sh` tests outbound

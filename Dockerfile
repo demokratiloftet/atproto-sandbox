@@ -1,10 +1,11 @@
 FROM node:24.17.0-bookworm-slim@sha256:862263c612aa437e3037674b85419622a9d93bff80aa1eee5398dfe686375532 AS build
 RUN apt-get update && apt-get install -y --no-install-recommends python3 make g++ ca-certificates && rm -rf /var/lib/apt/lists/*
+RUN npm install --global pnpm@11.8.0
 WORKDIR /sandbox
-COPY package.json package-lock.json ./
-RUN npm ci
+COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
+RUN pnpm install --frozen-lockfile
 COPY *.ts tsconfig.json ./
-RUN npm run build && npm prune --omit=dev
+RUN pnpm run build && pnpm prune --prod
 
 FROM node:24.17.0-bookworm-slim@sha256:862263c612aa437e3037674b85419622a9d93bff80aa1eee5398dfe686375532
 RUN apt-get update && apt-get install -y --no-install-recommends iptables util-linux ca-certificates && rm -rf /var/lib/apt/lists/*

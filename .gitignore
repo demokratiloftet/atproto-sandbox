@@ -1,4 +1,4 @@
-# Dependencies (restored with `npm ci`)
+# Dependencies (restored with `pnpm install --frozen-lockfile`)
 node_modules/
 
 # Local run output
